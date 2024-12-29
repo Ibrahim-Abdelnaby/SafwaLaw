@@ -1,14 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+:root {
+  --primary-color: #162820;
+  --secondary-color: #bebfa8;
+}
 #hero {
   height: 100vh;
-  background: url("../images/hero-img.jpg") center/cover no-repeat;
+  background: url("../images/hero-img.webp") center/cover no-repeat;
   position: relative;
 }
-/* #hero .container {
-  height: inherit;
-} */
 #hero .bg-overlay {
   position: absolute;
   inset: 0 0 0 auto;
   width: 50%;
-  background-image: url("../images/logo-overlay.png");
+  background-image: url("../images/logo-overlay.webp");
+  --animate-duration: 1s;
+}
+#hero header {
+  position: relative;
+  z-index: 10;
+  --animate-duration: 1s;
+}
+#hero .top-header {
+  font-size: 0.9rem;
+  direction: ltr;
+  padding-top: 1rem;
+  color: var(--secondary-color);
+}
+#hero .top-header .social {
+  gap: 1rem;
+}
+#hero nav {
+  position: relative;
+  right: 50px;
+}
+#hero nav ul > * {
+  font-weight: 600;
+}
+#hero nav ul > .active {
+  font-weight: 600;
+  position: relative;
+}
+#hero nav ul > .active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #162820;
+}
+#hero .bottom-header .banner {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+#hero .hero-content {
+  position: absolute;
+  inset: 0 0 0 0;
+  text-align: center;
+}
+#hero .hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+}
+#hero .hero-content p {
+  color: var(--secondary-color);
+}
+#hero .hero-content h1,
+#hero .hero-content p {
+  width: 90%;
+  margin: 0 auto 2rem;
+}
+
+#hero .hero-content p {
+  width: 70%;
+}
+
+#hero .animate__animated.animate__fadeIn {
+  --animate-duration: 5s;
 }
