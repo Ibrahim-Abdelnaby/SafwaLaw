@@ -44,13 +44,13 @@ button {
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Cairo", serif;
   direction: rtl;
-  height: 5000px;
   background-color: var(--primary-color);
 }
 
-#hero .container {
+.container {
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -59,6 +59,9 @@ body {
   display: flex;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -76,6 +79,9 @@ body {
   align-items: center;
 }
 
+.gap-5 {
+  gap: 1rem;
+}
 .gap-10 {
   gap: 2rem;
 }
@@ -101,9 +107,21 @@ body {
   margin-left: 0.5rem;
 }
 
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+}
+
 /* Whatsapp */
 .whatsapp {
   position: fixed;
+  z-index: 100;
   bottom: 3rem;
   right: 3rem;
   --animate-duration: 2s;
@@ -123,7 +141,7 @@ body {
   align-items: center;
   width: 100%;
   position: absolute;
-  bottom: 100px;
+  bottom: 150px;
 }
 
 .chevron {
@@ -214,4 +232,58 @@ button {
 }
 button:hover {
   transform: scale(0.95);
+}
+
+/* Services */
+.first-services {
+  margin-bottom: 5rem;
+  position: relative;
+}
+.services-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.services-grid {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.service {
+  border: 1px solid var(--secondary-color);
+  padding: 2rem 1rem;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  flex: 0 1 calc(25% - 1rem);
+  max-width: calc(25% - 1rem);
+  text-align: center;
+  line-height: 1.4;
+}
+.service .service-icon {
+  margin-bottom: 1rem;
+  width: 60px;
+}
+
+#meeting {
+  position: relative;
+}
+
+#services {
+  position: relative;
+}
+
+#services .bg-overlay {
+  position: absolute;
+  z-index: -1;
+  left: -1px;
+  top: 500px;
+}
+
+#meeting .bg-overlay {
+  position: absolute;
+  z-index: -1;
+  left: -1px;
 }
